@@ -1,0 +1,8 @@
+node_modules
+dist
+.npm-cache
+qa
+.npmrc
+AGENTS.md
+.DS_Store
+*.log
