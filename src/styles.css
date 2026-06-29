@@ -839,7 +839,7 @@ main {
   inset: 0;
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0.32), #050505 82%),
-    url("./assets/iced-coffee-glass-wide.jpg") center / cover no-repeat;
+    url("/svcoffee/assets/iced-coffee-glass-wide.jpg") center / cover no-repeat;
   opacity: 0.38;
   transform: scale(1.02);
 }

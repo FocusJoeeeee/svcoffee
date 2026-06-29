@@ -1,23 +1,25 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 
+const B = import.meta.env.BASE_URL;
+
 const assets = {
-  storefrontNight: "./assets/storefront-night.jpg",
-  silverCar: "./assets/silver-car-side.jpg",
-  storefrontDay: "./assets/storefront-day.jpg",
-  storefrontBlue: "./assets/storefront-blue-hour.jpg",
-  whiteCar: "./assets/white-car-sticker.jpg",
-  carVideo: "./assets/car-detail-scroll.mp4",
-  storage: "./assets/storage-racing-boxes.jpg",
-  marzocco: "./assets/marzocco-bar.jpg",
-  portafilter: "./assets/portafilter-dose.jpg",
-  silvia: "./assets/silvia-magazine.jpg",
-  espresso: "./assets/espresso-pull.jpg",
-  icedBar: "./assets/iced-coffee-bar.jpg",
-  door: "./assets/door-decal.jpg",
-  interior: "./assets/interior-flower.jpg",
-  pour: "./assets/pour-over-steam.jpg",
-  icedWide: "./assets/iced-coffee-glass-wide.jpg",
-  modelCars: "./assets/model-car-corner.jpg",
+  storefrontNight: `${B}assets/storefront-night.jpg`,
+  silverCar: `${B}assets/silver-car-side.jpg`,
+  storefrontDay: `${B}assets/storefront-day.jpg`,
+  storefrontBlue: `${B}assets/storefront-blue-hour.jpg`,
+  whiteCar: `${B}assets/white-car-sticker.jpg`,
+  carVideo: `${B}assets/car-detail-scroll.mp4`,
+  storage: `${B}assets/storage-racing-boxes.jpg`,
+  marzocco: `${B}assets/marzocco-bar.jpg`,
+  portafilter: `${B}assets/portafilter-dose.jpg`,
+  silvia: `${B}assets/silvia-magazine.jpg`,
+  espresso: `${B}assets/espresso-pull.jpg`,
+  icedBar: `${B}assets/iced-coffee-bar.jpg`,
+  door: `${B}assets/door-decal.jpg`,
+  interior: `${B}assets/interior-flower.jpg`,
+  pour: `${B}assets/pour-over-steam.jpg`,
+  icedWide: `${B}assets/iced-coffee-glass-wide.jpg`,
+  modelCars: `${B}assets/model-car-corner.jpg`,
 };
 
 const address = "山东省菏泽市牡丹区丹阳街道和平社区兴庆路和平社区综合楼北侧第一间";
