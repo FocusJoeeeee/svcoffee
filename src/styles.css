@@ -723,6 +723,9 @@ main {
   height: 100%;
   object-fit: cover;
   filter: contrast(1.16) saturate(1.02) brightness(0.68);
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .film-sticky::before {

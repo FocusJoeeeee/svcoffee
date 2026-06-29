@@ -132,13 +132,19 @@ function useScrollVideo() {
     const sync = () => {
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(() => {
+        if (!video || video.readyState < 1 || video.seeking) return;
+
         const rect = section.getBoundingClientRect();
         const travel = Math.max(1, rect.height - window.innerHeight);
         const progress = clamp(-rect.top / travel, 0, 1);
         const targetTime = progress * duration;
 
-        if (Number.isFinite(targetTime) && Math.abs(video.currentTime - targetTime) > 0.035) {
-          video.currentTime = targetTime;
+        if (Number.isFinite(targetTime) && Math.abs(video.currentTime - targetTime) > 0.05) {
+          if (video.fastSeek) {
+            video.fastSeek(targetTime);
+          } else {
+            video.currentTime = targetTime;
+          }
         }
 
         section.style.setProperty("--film-progress", progress.toFixed(3));
@@ -433,6 +439,8 @@ function ScrollFilm() {
           muted
           playsInline
           preload="auto"
+          disablePictureInPicture
+          disableRemotePlayback
         />
         <div className="film-scan" aria-hidden="true" />
         <div className="film-copy">
