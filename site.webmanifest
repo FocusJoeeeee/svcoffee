@@ -1,0 +1,10 @@
+{
+  "name": "Svcoffee",
+  "short_name": "Svcoffee",
+  "description": "Silvisions coffee in Heze for specialty coffee, modified cars, stickers, and slow bar energy.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "icons": []
+}
